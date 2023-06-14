@@ -138,9 +138,9 @@ alias gd='git diff'
 #/bin/bash
 declare -A pomo_options
 pomo_options=(
-    ["work"]="45"
-    ["break"]="10"
-    ["emacs"]="30"
+    ["work"]="25"
+    ["break"]="5"
+    ["nap"]="30"
 )
 
 pomodoro () {
@@ -153,4 +153,4 @@ pomodoro () {
 
 alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
-alias em="pomodoro 'emacs'"
+alias np="pomodoro 'nap'"
