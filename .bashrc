@@ -116,8 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. "$HOME/.cargo/env"
-
 # Navigation
 alias v='nvim'
 alias ..='cd ..'
@@ -154,3 +152,7 @@ pomodoro () {
 alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
 alias np="pomodoro 'nap'"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
