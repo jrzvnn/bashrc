@@ -121,14 +121,18 @@ alias v='nvim'
 alias ..='cd ..'
 alias ll='ls -la'
 alias c='clear'
-alias p='cd ~/Projects'
+alias p='cd ~/Documents/Projects'
 alias cn='cd ~/.config/nvim'
+alias token='~/Documents/Projects/clipboard-utils/token.sh' 
+alias pwd='~/Documents/Projects/clipboard-utils/pwd.sh' 
+alias pup='~/Documents/Projects/clipboard-utils/pup.sh' 
+alias pup1='~/Documents/Projects/clipboard-utils/pup1.sh' 
 
 # Git aliases
 alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
-alias gc='git commit'
+alias gc='git commit -m'
 alias gl='git log --oneline'
 alias gb='git checkout -b'
 alias gd='git diff'
@@ -156,3 +160,26 @@ alias np="pomodoro 'nap'"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# export PATH="$HOME/anaconda3/bin:$PATH"  # commented out by conda initialize
+
+echo $SHELL
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jrzvnn/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jrzvnn/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jrzvnn/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jrzvnn/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+eval "$(starship init bash)"
+
+export PATH="$HOME/.local/bin":$PATH
